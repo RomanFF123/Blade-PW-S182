@@ -12,12 +12,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-/* Route::get('/', function () {
+//RUTA 1
+ Route::get('/', function () {
     return view('welcome');
-}); */
+})->name('welcome'); 
 
-Route::view('/', 'welcome')->name('RutaInicio');
-// Route::view('/cuestionario', 'cuestionario')->name('RutaFormulario');
-// Route::view('/tabla', 'cuestionario')->name('RutaRecuerdos');
+Route::get('/vista3', function () {
+    return view('Int3');
+})->name('vista3'); 
+
+Route::view('/vista1', 'Int1')->name('vista1');
+Route::view('/vista2', 'Int2')->name('vista2');
 
