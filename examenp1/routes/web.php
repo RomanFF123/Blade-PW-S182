@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
+
+Route::view('/', 'welcome')->name('RutaInicio');
+// Route::view('/cuestionario', 'cuestionario')->name('RutaFormulario');
+// Route::view('/tabla', 'cuestionario')->name('RutaRecuerdos');
 
