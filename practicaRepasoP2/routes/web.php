@@ -13,22 +13,14 @@ use App\Http\Controllers\bibliotecaController;
 |
 */
 
+
+/*
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-/*
-Route::controller(bibliotecaController::class)->group(function(){
-    Route::get('/','metodoInicio' )->name('RutaInicio');
-    Route::get('/formulario','metodoFormulario')->name('RutaFormulario');
-    Route::post('/guardarRecuerdo','metodoFormulario')->name('RutaFormulario');
-}
-); */
+*/
 Route::get('/formulario',[bibliotecaController::class,'metodoFormulario'] )->name('RutaFormulario');
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/',[bibliotecaController::class,'metodoInicio'] )->name('RutaInicio');
+Route::post('/registrar',[bibliotecaController::class,'metodoRegistrar'] )->name('RutaRegistrar');

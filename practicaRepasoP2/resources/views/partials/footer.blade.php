@@ -1,7 +1,7 @@
-<footer class="text-center text-white" style="background-color: #f1f1f1;">
+<footer class="text-center text-white mt-5" style="background-color: #f1f1f1;">
 
     <div class="container pt-4">
-        <h1 class="display-5 text-center text-dark mt-1">BIBLIOTECA</h1>
+        <h1 class="display-7 text-center text-dark mt-1">BIBLIOTECA</h1>
     </div>
    
     <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
