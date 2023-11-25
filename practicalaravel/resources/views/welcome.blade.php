@@ -4,6 +4,6 @@
 
 @section('contenido')
 
-    <h1 class="display-1 text-center text-danger mt-5"> NEWS </h1>
+    <h1 class="display-1 text-center text-danger mt-5"> INICIO </h1>
   
     @endsection

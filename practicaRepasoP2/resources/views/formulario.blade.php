@@ -42,15 +42,13 @@
     <div class="d-grid gap-2">
       <button class="btn btn-success" type="submit">Guardar Registro</button>
     </div>
-    
     @if(session()->has('confirmacion'))
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <strong>{{ session('confirmacion') }}</strong>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-  @endif
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{ session('confirmacion') }}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
   </form>
-
 
 </div>
 @endsection

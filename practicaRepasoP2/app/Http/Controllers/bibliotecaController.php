@@ -18,5 +18,9 @@ class bibliotecaController extends Controller
         $libro = $req->input('txtTitulo');
         return redirect('/formulario')->with('confirmacion', "Todo correcto: Libro \"$libro\" guardado");
     }
+
+
+
+
 }
 

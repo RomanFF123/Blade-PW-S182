@@ -10,17 +10,17 @@
             <a class="nav-link {{ request()->routeIs('RutaInicio')?'text-danger':''}}" aria-current="page" href="{{ route('RutaInicio') }}">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ request()->routeIs('RutaFormulario')?'text-danger':''}}" aria-current="page" href="{{ route('RutaFormulario') }}">Formulario</a>
+            <a class="nav-link {{ request()->routeIs('recuedo.create')?'text-danger':''}}" aria-current="page" href="{{ route('recuerdo.create') }}">Formulario</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ request()->routeIs('RutaRecuerdos')?'text-danger':''}}" aria-current="page" href="{{ route('RutaRecuerdos') }}">Recuerdos</a>
+            <a class="nav-link {{ request()->routeIs('recuerdo.index')?'text-danger':''}}" aria-current="page" href="{{ route('recuerdo.index') }}">Recuerdos</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('RutaRecuerdos') }}">Recuerdos</a></li>
+              <li><a class="dropdown-item" href="{{ route('recuerdo.index') }}">Recuerdos</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
