@@ -8,6 +8,8 @@ use App\Http\Controllers\ControllerCRUD;
 Route::get('/recuerdo/create',[ControllerCRUD::class,'create'] )->name('recuerdo.create');
 Route::get('/recuerdo',[ControllerCRUD::class,'index'] )->name('recuerdo.index');
 Route::post('/recuerdo',[ControllerCRUD::class,'store'] )->name('recuerdo.store');
+Route::post('/recuerdo/{id}/confirm', [ControllerCRUD::class,'update'])->name('recuerdo.update');
+Route::delete('/recuerdo/{id}/delete', [ControllerCRUD::class, 'destroy'])->name('recuerdo.destroy');
 
 
 // Rutas Individuales DiarioController

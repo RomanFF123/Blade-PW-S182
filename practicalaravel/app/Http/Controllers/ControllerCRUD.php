@@ -61,16 +61,23 @@ class ControllerCRUD extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id) //Abre vistas de edición
+    public function update(validadorFormDiario $req, string $id)
     {
-        //
+        DB::table('tb_recuerdos')->where('id',$id)->update([
+            'titulo'=>$req->input('txtTitulo'),
+            'recuerdo'=>$req->input('txtRecuerdo'),
+            'updated_at'=>Carbon::now(),
+        ]);
+        return redirect('recuerdo/create')->with('confirmacion','Tu recuerdo modificado');
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id) 
-    {
-        //
-    }
+    public function destroy($id)
+{
+    DB::table('tb_recuerdos')->where('id', $id)->delete();
+    return redirect()->route('recuerdo.index')->with('confirmacion', 'Recuerdo eliminado exitosamente');
+}
 }
