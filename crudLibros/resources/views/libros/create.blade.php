@@ -13,26 +13,26 @@
 
         <div class="modal-body text-primary">
 
-            <form method="POST" action="">
+            <form method="POST" action="{{ route('home.store')}}">
                 @csrf               
                 <div class="mb-3">
                   <label  class="form-label">Titulo Libro: </label>
-                  <input type="text" class="form-control" name="">
+                  <input type="text" class="form-control" name="txtTit">
                 </div>
 
                 <div class="mb-3">
                 <label class="form-label">Autor: </label>
-                <input type="text" class="form-control" name="">
+                <input type="text" class="form-control" name="txtAut">
                 </div>
 
                 <div class="mb-3"> 
                 <label class="form-label">Paginas: </label>
-                <input type="number" class="form-control" name="">
+                <input type="number" class="form-control" name="txtPag">
                 </div>
 
                 <div class="mb-3"> 
                   <label class="form-label">Año de Publicacion: </label>
-                  <input type="number" class="form-control" name="">
+                  <input type="number" class="form-control" name="txtAnio">
                   </div>
    
         </div>

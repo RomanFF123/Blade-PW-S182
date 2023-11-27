@@ -3,8 +3,8 @@
 @section('titulo','Listado de Libros')
 
 @section('content')
-
-
+@include('libros.create')
+ 
 <h3 class="display-1 text-center text-danger mt-4"> Listado Libros</h3>
 
 <div class="container">
@@ -17,7 +17,7 @@
 
         <table class="table ">
 
-            <button type="button" class="btn btn-success m-5" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" class="btn btn-success m-5" data-bs-toggle="modal" data-bs-target="#create">
                 <i class="bi bi-floppy"></i>  Nuevo Libro
             </button>
 
@@ -35,13 +35,14 @@
             </thead> 
             <tbody>
                 <tr>
-                    
+                    @foreach ($allbook as $item )
+
                     <tr>
-                        <td scope="row"> id </td>
-                        <td> titulo</td>
-                        <td> autor</td>
-                        <td> paginas</td>
-                        <td> anio</td>
+                        <td scope="row"> {{$item->id}} </td>
+                        <td> {{$item->titulo}}</td>
+                        <td> {{$item->autor}}</td>
+                        <td> {{$item->paginas}}</td>
+                        <td> {{$item->anio}}</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,10 +59,9 @@
                               </div>    
                              
                         </td>
-                        
+                        @endforeach
                     </tr>
 
-                    @endforeach
             </tbody>
         </table>
 
