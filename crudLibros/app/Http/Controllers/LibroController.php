@@ -39,35 +39,29 @@ class LibroController extends Controller
         return redirect()->back();
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(libro $libro)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(libro $libro)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, libro $libro)
+    public function update(Request $request, $id)
     {
-        //
+        $uptlibro= libro::find($id);
+        $uptLibro->titulo =$request->txtTit;
+        $uptLibro->autor =$request->txtAut;
+        $uptLibro->paginas =$request->txtPag;
+        $uptLibro->anio =$request->txtAnio;
+        $uptLibro->update();
+        return redirect()->back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(libro $libro)
+    public function destroy($id)
     {
-        //
+    $deslibro= libro::find($id);
+    $deslibro= delete();
+    return redirect()->back();
+
     }
 }

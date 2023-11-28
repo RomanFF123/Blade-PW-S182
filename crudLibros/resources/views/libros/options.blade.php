@@ -3,7 +3,7 @@
   
   <!-- Modal Actualizar -->
   
-  <div class="modal fade" id=""  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="update{{$item->id}}"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content fw-bold">
         
@@ -14,29 +14,29 @@
 
         <div class="modal-body text-primary">
 
-            <form method="POST" action="">
+            <form method="POST" action="{{route('home.update',$item->id)}}">
                 
                 @csrf 
-                @method('') 
+                @method('PUT') 
                 
                 <div class="mb-3">
                   <label  class="form-label">Titulo Libro: </label>
-                  <input type="text" class="form-control" name="" value="">
+                  <input type="text" class="form-control" name="txtTit" value="{{$item->titulo}}">
                 </div>
 
                 <div class="mb-3">
                 <label class="form-label">Autor: </label>
-                <input type="text" class="form-control" name="" value="">
+                <input type="text" class="form-control" name="txtAut" value="{{$item->autor}}">
                 </div>
 
                 <div class="mb-3"> 
                 <label class="form-label">Paginas: </label>
-                <input type="number" class="form-control" name="" value="">
+                <input type="number" class="form-control" name="txtPag" value="{{$item->paginas}}">
                 </div>
 
                 <div class="mb-3"> 
                   <label class="form-label">Año de Publicacion: </label>
-                  <input type="number" class="form-control" name="" value="">
+                  <input type="number" class="form-control" name="txtAnio" value="{{$item->anio}}">
                   </div>
    
         </div>
@@ -58,7 +58,7 @@
   
   <!-- Modal Para Eliminar  -->
 
-  <div class="modal fade" id=""  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="destroy{{$item->id}}"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         
@@ -69,11 +69,11 @@
 
         <div class="modal-body">
 
-            <form method="POST" action="">
+            <form method="POST" action="{{route('home.destroy', $item->id)}}">
                 @csrf 
-                @method('')   
+                @method('DELETE')   
                 <div class="text-danger fs-4 fw-semibold">
-                  ¿Seguro que borraras al Libro   ?
+                  ¿Seguro que borraras al Libro {{$item->titulo}}  ?
                 </div>           
 
    

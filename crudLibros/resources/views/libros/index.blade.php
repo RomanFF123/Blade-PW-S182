@@ -49,16 +49,17 @@
                                     <i class="bi bi-list-stars"></i> Opciones
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <button type="button" class="btn btn-warning m-1" data-bs-toggle="modal" data-bs-target="#">
+                                    <button type="button" class="btn btn-warning m-1" data-bs-toggle="modal" data-bs-target="#update{{$item->id}}">
                                         <i class="bi bi-pencil-square"></i> - Editar 
                                       </button>
-                                    <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#">
+                                    <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#destroy{{$item->id}}">
                                         <i class="bi bi-trash"></i> - Borrar 
                                       </button>
                                 </ul>
                               </div>    
                              
                         </td>
+                        @include('libros.options')
                         @endforeach
                     </tr>
 
